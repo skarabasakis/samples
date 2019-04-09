@@ -14,6 +14,7 @@ let stream;
 
 const vgaButton = document.querySelector('#vga');
 const qvgaButton = document.querySelector('#qvga');
+const qhdButton = document.querySelector('#qhd');
 const hdButton = document.querySelector('#hd');
 const fullHdButton = document.querySelector('#full-hd');
 const fourKButton = document.querySelector('#fourK');
@@ -38,6 +39,10 @@ qvgaButton.onclick = () => {
   getMedia(qvgaConstraints);
 };
 
+qhdButton.onclick = () => {
+  getMedia(qhdConstraints);
+};
+
 hdButton.onclick = () => {
   getMedia(hdConstraints);
 };
@@ -60,6 +65,10 @@ const qvgaConstraints = {
 
 const vgaConstraints = {
   video: {width: {exact: 640}, height: {exact: 480}}
+};
+
+const qhdConstraints = {
+  video: {width: {exact: 960}, height: {exact: 540}}
 };
 
 const hdConstraints = {
